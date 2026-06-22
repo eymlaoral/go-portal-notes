@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>世界杯资料索引 | 信息整理与存档</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f2f7f9;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.7;
+      color: #1f2d3a;
+    }
+
+    .wrapper {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ---------- hero ---------- */
+    .hero {
+      background: linear-gradient(145deg, #e0f0f3 0%, #c6dee4 100%);
+      padding: 80px 0 70px;
+      border-radius: 0 0 48px 48px;
+      box-shadow: 0 12px 30px rgba(0, 40, 50, 0.06);
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      color: #12434d;
+      margin-bottom: 18px;
+    }
+
+    .hero .sub {
+      max-width: 540px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #2d5d69;
+      background: rgba(255, 255, 255, 0.55);
+      padding: 16px 28px;
+      border-radius: 60px;
+      backdrop-filter: blur(2px);
+      display: inline-block;
+      font-weight: 380;
+    }
+
+    .hero .sub a {
+      color: #13606e;
+      text-decoration: none;
+      border-bottom: 1px dashed #3a8b9b;
+    }
+
+    .hero .sub a:hover {
+      color: #0a3a44;
+      border-bottom-color: #0a3a44;
+    }
+
+    /* ---------- 卡片网格 ---------- */
+    .grid-section {
+      padding: 60px 0 20px;
+    }
+
+    .section-title {
+      font-size: 1.7rem;
+      font-weight: 450;
+      color: #12434d;
+      margin-bottom: 32px;
+      padding-left: 12px;
+      border-left: 5px solid #2d8f9e;
+    }
+
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 28px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 28px;
+      padding: 28px 20px 24px;
+      box-shadow: 0 6px 18px rgba(0, 30, 40, 0.04);
+      transition: all 0.25s ease;
+      border: 1px solid #d9e6ea;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 28px rgba(0, 45, 55, 0.08);
+      border-color: #b2d2da;
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+      font-weight: 440;
+      color: #185562;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #2d4a54;
+    }
+
+    .card .highlight {
+      display: inline-block;
+      background: #d8edf2;
+      border-radius: 40px;
+      padding: 2px 12px;
+      color: #0a4c5a;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      margin-top: 12px;
+    }
+
+    /* ---------- 说明区 ---------- */
+    .note-area {
+      background: #dcecef;
+      border-radius: 40px;
+      padding: 45px 40px 40px;
+      margin: 20px 0 40px;
+    }
+
+    .note-area h2 {
+      font-size: 1.6rem;
+      font-weight: 420;
+      color: #12434d;
+      margin-bottom: 20px;
+    }
+
+    .note-area p {
+      max-width: 800px;
+      margin-bottom: 18px;
+      color: #1f4955;
+    }
+
+    .note-area a {
+      color: #13606e;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: #6fa3ae;
+    }
+
+    .note-area a:hover {
+      color: #0b3d49;
+      text-decoration-color: #0b3d49;
+    }
+
+    .emph-badge {
+      display: inline-block;
+      background: #b2d7df;
+      color: #06373f;
+      font-size: 0.85rem;
+      padding: 5px 18px;
+      border-radius: 40px;
+      margin-top: 8px;
+    }
+
+    /* ---------- FAQ 摘要 ---------- */
+    .faq-summary {
+      margin-bottom: 30px;
+    }
+
+    .faq-item {
+      background: white;
+      padding: 20px 24px;
+      margin-bottom: 12px;
+      border-radius: 24px;
+      border-left: 5px solid #8dc2cd;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    }
+
+    .faq-item h4 {
+      font-weight: 470;
+      font-size: 1.1rem;
+      color: #12434d;
+      margin-bottom: 4px;
+    }
+
+    .faq-item p {
+      color: #2f5562;
+      font-size: 0.95rem;
+    }
+
+    /* ---------- 底部 ---------- */
+    .footer-links {
+      border-top: 1px solid #c2d8dd;
+      padding: 36px 0 50px;
+      margin-top: 20px;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #2d5d69;
+    }
+
+    .footer-links a {
+      color: #13606e;
+      text-decoration: none;
+      border-bottom: 1px dotted #5d9caa;
+    }
+
+    .footer-links a:hover {
+      color: #063f4b;
+      border-bottom-color: #063f4b;
+    }
+
+    .footer-links .muted {
+      color: #6b8e98;
+      font-size: 0.85rem;
+      margin-top: 10px;
+    }
+
+    /* ---------- 响应式 ---------- */
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 2.1rem;
+      }
+
+      .hero .sub {
+        font-size: 0.95rem;
+        padding: 12px 18px;
+      }
+
+      .note-area {
+        padding: 30px 20px;
+      }
+
+      .grid-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- hero 区 -->
+    <header class="hero">
+      <h1>世界杯·资料归档</h1>
+      <div class="sub">
+        从历届记录、球队数据到赛事脉络 —— 一份围绕 <a href="https://go-portal-worldcup.com">世界杯</a> 的信息索引
+      </div>
+    </header>
+
+    <!-- 优势区（卡片网格） -->
+    <section class="grid-section">
+      <h2 class="section-title">整理方式</h2>
+      <div class="grid-cards">
+        <div class="card">
+          <h3>赛季跨度</h3>
+          <p>覆盖 1930 年至今所有决赛圈数据，按年份、东道主、赛制分段归档。便于横向比较不同时代的比赛节奏与规则变化。</p>
+          <span class="highlight">历届</span>
+        </div>
+        <div class="card">
+          <h3>球队档案</h3>
+          <p>每支参赛队伍的出场次数、最佳战绩、进球分布及关键人物。不依赖单一来源，多重校核后形成简明条目。</p>
+          <span class="highlight">名录</span>
+        </div>
+        <div class="card">
+          <h3>比赛记录</h3>
+          <p>决赛、半决赛、经典小组赛的比分与简述，同时保留原始赛程结构。适合快速查找某届赛事的关键场次。</p>
+          <span class="highlight">赛果</span>
+        </div>
+        <div class="card">
+          <h3>冷门与趋势</h3>
+          <p>从卫冕冠军出局、黑马突围到进球数演变，用数字和事实呈现大赛中反复出现的现象，不做夸张推断。</p>
+          <span class="highlight">观察</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 说明区（资料索引定位） -->
+    <div class="note-area">
+      <h2>关于这个索引</h2>
+      <p>这个页面所指向的资料站 <a href="https://go-portal-worldcup.com">世界杯</a> 更像一个长线整理的笔记本：不追逐即时新闻，也不提供实时比分，而是把已经发生过的赛事信息按逻辑归置。适合赛前回顾、写稿查证、或者单纯想翻一翻某届大赛的原始数据。</p>
+      <p>整理者尽量保持克制——每一条记录都标注原始出处或数据来源类型（如官方报告、比赛录像核对、多平台交叉）。如果你发现某处数字有出入，欢迎指正，索引会持续迭代。</p>
+      <span class="emph-badge">持续更新 · 非官方</span>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <section class="faq-summary">
+      <h2 class="section-title">常见问题摘要</h2>
+      <div class="faq-item">
+        <h4>为什么看不到最新一届的所有比赛细节？</h4>
+        <p>索引以「完整记录」为目标，新一届赛事的数据需要一定时间进行多源比对和结构化整理，通常会在赛后三个月内补全。</p>
+      </div>
+      <div class="faq-item">
+        <h4>数据包含预选赛吗？</h4>
+        <p>目前仅收录决赛圈（正赛）阶段的全部比赛。预选赛因各洲赛制差异较大，暂时没有纳入统一框架，未来可能会以附录形式补充。</p>
+      </div>
+      <div class="faq-item">
+        <h4>如何引用这里的资料？</h4>
+        <p>建议先核对原链接中提供的参考来源。本站仅做汇编整理，不声明对原始数据的著作权，引用时请以原始出处为准。</p>
+      </div>
+    </section>
+
+    <!-- 底部链接 -->
+    <footer class="footer-links">
+      <p>主要资料入口：<a href="https://go-portal-worldcup.com">世界杯</a> · 信息索引持续搭建中</p>
+      <p class="muted">非 FIFA 官方 · 仅作整理与参考</p>
+    </footer>
+  </div>
+</body>
+</html>
